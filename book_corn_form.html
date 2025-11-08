@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สั่งซื้อหนังสือ 'ข้าวโพด'</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* The main container styled like a Google Form */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 750px;
+            border-top: 10px solid #7B1FA2; /* KU-like Purple */
+        }
+
+        /* --- Header Section (from Image 1) --- */
+        .form-header {
+            padding: 24px;
+        }
+
+        .form-header h1 {
+            font-size: 28px;
+            color: #202124;
+            margin: 0 0 12px 0;
+        }
+
+        .form-header p {
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        
+        .form-logos {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        /* A simple line to separate sections */
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin-top: 20px;
+        }
+
+        /* --- Main Form Body (from Image 2) --- */
+        .form-body {
+            padding: 24px;
+        }
+
+        /* Styles for each "question" box */
+        .form-question {
+            background-color: #ffffff;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .form-question label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 16px;
+        }
+        
+        /* Styles for text inputs and textareas */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important for padding to work */
+        }
+
+        textarea {
+            resize: vertical; /* Allow user to resize vertically */
+            min-height: 100px;
+        }
+        
+        /* Style for the "Add File" button */
+        input[type="file"] {
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: #5f6368;
+        }
+
+        input[type="file"]::file-selector-button {
+            background-color: #f8f9fa;
+            color: #3c4043;
+            border: 1px solid #dadce0;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 12px;
+        }
+
+        /* --- Payment Info Section --- */
+        .payment-info {
+            background-color: #f3e5f5; /* Light purple background */
+            border: 1px solid #e1bee7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+        
+        .payment-info h2 {
+            margin-top: 0;
+            color: #4a148c;
+        }
+        
+        .payment-info p {
+            margin: 4px 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .payment-info .account-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6a1b9a;
+            margin: 10px 0;
+        }
+        
+        .payment-info .price {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        /* --- Form Footer & Buttons --- */
+        .form-footer {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between; /* Puts buttons on opposite ends */
+            align-items: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #1a73e8; /* Google's blue */
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #1865c9;
+        }
+        
+        /* Style for the "Back" button (as a reset) */
+        input[type="reset"] {
+            background-color: #e0e0e0;
+            color: #5f6368;
+        }
+        input[type="reset"]:hover {
+            background-color: #d1d1d1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        
+        <div class="form-header">
+            <div class="form-logos">
+                <span>ภาควิชาพืชไร่นา คณะเกษตร มหาวิทยาลัยเกษตรศาสตร์</span>
+            </div>
+            <h1>สั่งซื้อหนังสือ "ข้าวโพด" โดย ศ.ราเชนทร์</h1>
+            <p>ศาสตราจารย์ ดร.ราเชนทร์ ชูศรี, ภิพรรณ (ข้อมูลจากรูป)</p>
+            <p>ข้าวโพด: การผลิต การใช้ประโยชน์ การวิเคราะห์ปัญหา และการจัดการเทคโนโลยีในไร่เกษตรกร (ข้อมูลจากรูป)</p>
+        </div>
+
+        <hr>
+
+        <form action="/submit-order" method="post" enctype="multipart/form-data">
+
+            <div class="form-body">
+
+                <div class="form-question">
+                    <h2>การจัดส่ง</h2>
+                    
+                    <label for="full-name">ชื่อ-นามสกุล *</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    <br><br>
+
+                    <label for="address">ที่อยู่สำหรับจัดส่ง *</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                    <br><br>
+
+                    <label for="phone">โทรศัพท์ *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <br><br>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                    <br><br>
+
+                    <label for="line-id">ID LINE</label>
+                    <input type="text" id="line-id" name="line-id">
+                </div>
+
+
+                <div class="form-question">
+                    <h2>การสั่งซื้อ และ ชำระค่าหนังสือ</h2>
+                    <p>โอนเงินเข้าบัญชีเพื่อการศึกษา ภาควิชาพืชไร่นา</p>
+                    
+                    <div class="payment-info">
+                        <h2><img src="https://i.imgur.com/v1iW0Fw.png" alt="SCB Logo" height="24"> ธนาคารไทยพาณิชย์</h2>
+                        <p>ชื่อบัญชี: <strong>กองทุนเพื่อการศึกษา ภาควิชาวิธีไร่นา</strong></p>
+                        <p>สาขา: <strong>มหาวิทยาลัยเกษตรศาสตร์ (บางเขน)</strong></p>
+                        <p>เลขที่บัญชี:</p>
+                        <p class="account-number">235-235872-9</p>
+                        <p class="price">ราคาเล่มละ 350 บาท รวมค่าจัดส่งแล้ว</p>
+                    </div>
+                </div>
+
+                <div class="form-question">
+                    <label for="payment-proof">อัปโหลดหลักฐานการโอนเงิน *</label>
+                    <input type="file" id="payment-proof" name="payment-proof" accept="image/png, image/jpeg" required>
+                </div>
+
+            </div>
+
+            <div class="form-footer">
+                <input type="reset" value="BACK">
+                
+                <input type="submit" value="SUBMIT">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
